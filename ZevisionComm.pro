@@ -43,5 +43,5 @@ RESOURCES += \
     resources/resources.qrc
 
 
-#RC_ICONS = virgoa.ico
+RC_ICONS = design.ico
 
