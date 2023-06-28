@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ZevisionComm</class>
+ <widget class="QMainWindow" name="ZevisionComm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZevisionComm</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="5,9">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>Comm</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Port:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>138</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Baudrate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>138</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="cb_bdrate">
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>30</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>9600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>19200</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>57600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>115200</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="cb_port">
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="3">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="minimumSize">
+              <size>
+               <width>75</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>IP:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="IPAddress" name="wgt_ip" native="true"/>
+           </item>
+          </layout>
+         </item>
+         <item row="5" column="0" colspan="3">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_conn_ctrl">
+             <property name="minimumSize">
+              <size>
+               <width>90</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>90</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Conn</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Method:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="cb_method">
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>30</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>RS232</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ethernet</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>138</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="tb_info"/>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_query">
+       <attribute name="title">
+        <string>Query</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="checkBox">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="checkBox_12">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="checkBox_2">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="checkBox_10">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="checkBox_11">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="checkBox_4">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="checkBox_9">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="checkBox_8">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="checkBox_16">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QCheckBox" name="checkBox_6">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QCheckBox" name="checkBox_14">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QCheckBox" name="checkBox_7">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QCheckBox" name="checkBox_15">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QCheckBox" name="checkBox_5">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QCheckBox" name="checkBox_13">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_update">
+       <attribute name="title">
+        <string>Update</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="checkBox_17">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QCheckBox" name="checkBox_28">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="checkBox_18">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QCheckBox" name="checkBox_27">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="checkBox_19">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QCheckBox" name="checkBox_30">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="checkBox_20">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QCheckBox" name="checkBox_31">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="checkBox_21">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QCheckBox" name="checkBox_29">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QCheckBox" name="checkBox_23">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QCheckBox" name="checkBox_33">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QCheckBox" name="checkBox_22">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QCheckBox" name="checkBox_32">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QCheckBox" name="checkBox_25">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QCheckBox" name="checkBox_35">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QCheckBox" name="checkBox_26">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="2">
+         <widget class="QCheckBox" name="checkBox_36">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QCheckBox" name="checkBox_24">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="2">
+         <widget class="QCheckBox" name="checkBox_34">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>15</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="11" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Value:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuSetup">
+    <property name="title">
+     <string>Setup</string>
+    </property>
+    <addaction name="actionProtocol"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionManual"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetup"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionComm">
+   <property name="text">
+    <string>Comm</string>
+   </property>
+  </action>
+  <action name="actionProtocol">
+   <property name="text">
+    <string>Protocol</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>Manual</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>IPAddress</class>
+   <extends>QWidget</extends>
+   <header location="global">utilities/ipaddress.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
